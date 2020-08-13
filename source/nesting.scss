@@ -1,0 +1,28 @@
+// вложенность
+.example {
+    span {
+        background-color: pink;
+    }
+}
+.container-example {
+    border: 1px solid grey;
+    text-align: center;
+    padding: 1rem;
+}
+pre {
+    background-color: rgb(224, 217, 217);
+    padding: 1rem;
+    .span-selector {
+        color: teal;
+    }
+    .span-prop {
+        color: rgb(209, 100, 118);
+    }
+}
+
+.link {
+    color: pink;
+    &:hover {
+        color: teal;
+    }
+}

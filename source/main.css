@@ -1,16 +1,3 @@
-html {
-  height: 100vh;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 24px;
-}
-
 .container-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,10 +34,6 @@ body {
   color: #f1efef;
 }
 
-code {
-  background-color: #b4dfdf;
-}
-
 .example span {
   background-color: pink;
 }
@@ -77,6 +60,54 @@ pre .span-prop {
 }
 .link:hover {
   color: teal;
+}
+
+.container-example-cub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-cub {
+  width: 2rem;
+  height: 2rem;
+  background-color: grey;
+  border: 1px solid teal;
+  margin: 10px;
+  cursor: pointer;
+}
+.example-cub:hover {
+  background-color: pink;
+}
+
+.cub-1 {
+  background-color: pink;
+}
+
+.button-example-import {
+  padding: 10px;
+  background-color: teal;
+  color: #f1efef;
+}
+.button-example-import:hover {
+  background-color: #113636;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 24px;
+}
+
+code {
+  background-color: #b4dfdf;
 }
 
 /*# sourceMappingURL=main.css.map */

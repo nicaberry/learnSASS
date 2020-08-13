@@ -1,0 +1,26 @@
+//переменные 
+$border-color: teal;
+$accent-color: pink;
+$primary-color: grey;
+ 
+.container-example-cub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-cub {
+    width: 2rem;
+    height: 2rem;
+    background-color: $primary-color;
+    border: 1px solid $border-color;
+    margin: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: $accent-color;
+    }
+}
+
+.cub-1 {
+    background-color: $accent-color;
+}

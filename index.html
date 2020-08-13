@@ -29,7 +29,7 @@
                 <section>
                     <h3>1. Вложенность.</h3>
                     <ul>
-                        <li><span>Sass</span> позволяет вкладывать стили внутрь других стилей;</li>
+                        <li>Sass позволяет вкладывать стили внутрь других стилей;</li>
                         <li>В вложенности можно исползовать все селекторы CSS;</li>
                         <li>Есть свой селектор <code>&</code>, который заменяет родителя;</li>
                     </ul>
@@ -57,7 +57,80 @@
     }
 }
 </pre>
+                </section>
 
+                <section>
+                    <h3>2. Переменные.</h3>
+                    <ul>
+                        <li>Sass позволяет создавать переменные;</li>
+                        <li>Объявляется переменная с помощью знака <code>$</code>;</li>
+                        <li>Далее задаётся любое имя на латинице <code>$myColor</code>;</li>
+                        <li>И через двоеточие задаётся значение переменной <code>$myColor: pink</code>;</li>
+                    </ul>
+                    <div class="container-example">
+                        <div class="container-example-cub">
+                            <div class="example-cub"></div>
+                            <div class="example-cub cub-1"></div>
+                            <div class="example-cub"></div>
+                            <div class="example-cub"></div>
+                            <div class="example-cub"></div>
+                        </div>
+                    </div>
+<pre>
+<span class="span-prop">$border-color</span>: teal;
+<span class="span-prop">$accent-color</span>: pink;
+<span class="span-prop">$primary-color</span>: grey;
+ 
+<span class="span-selector">.container-example-cub</span> {
+    display: <span class="span-prop">flex</span>;
+    justify-content: <span class="span-prop">center</span>;
+    align-items: <span class="span-prop">center</span>;
+}
+
+<span class="span-selector">.example-cub</span> {
+    width: <span class="span-prop">2rem</span>;
+    height: <span class="span-prop">2rem</span>;
+    background-color: <span class="span-prop">$primary-color</span>;
+    border: <span class="span-prop">1px solid $border-color</span>;
+    margin: <span class="span-prop">10px</span>;
+    &:hover {
+        background-color: <span class="span-prop">$accent-color</span>;
+    }
+}
+
+<span class="span-selector">.cub-1</span> {
+    background-color: <span class="span-prop">$accent-color</span>;
+}
+</pre>
+                </section>
+                
+                <section>
+                    <h3>3. Импорт</h3>
+                    <ul>
+                        <li>Sass позволяет импортировать данные из другого файла;</li>
+                        <li>Для импорта возьмите файл, например <code>button.scss</code>;</li>
+                        <li>Далее в отслеживаемом файле в самом вверху документа напишите <code>@import "button.scss(имя/путь импортируемого файла)"</code>;</li>
+                    </ul>
+                    <div class="container-example">
+                        <div class="container-example-cub">
+                            <button class="button-example-import">@import</button>
+                        </div>
+                    </div>
+<pre>
+//button.scss
+<span class="span-selector">.button-example-import</span> {
+    padding: <span class="span-prop">10px</span>;
+    background-color: <span class="span-prop">teal</span>;
+    color: <span class="span-prop">rgb(241, 239, 239)</span>;
+    <span class="span-selector">&:hover</span> {
+        background-color: <span class="span-prop">rgb(17, 54, 54)</span>;
+    }
+}
+</pre>
+<pre>
+//style.scss
+<span class="span-prop">@import</span> "button.scss";
+</pre>
                 </section>
             </section>
         </main>

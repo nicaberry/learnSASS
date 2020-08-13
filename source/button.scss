@@ -1,0 +1,8 @@
+.button-example-import {
+    padding: 10px;
+    background-color: teal;
+    color: rgb(241, 239, 239);
+    &:hover {
+        background-color: rgb(17, 54, 54);
+    }
+}
