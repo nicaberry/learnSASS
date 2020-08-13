@@ -1,0 +1,23 @@
+@mixin firstMixin($color) {
+    background-color: $color;
+    padding: 10px;
+    color: rgb(241, 239, 239);
+    margin-left: 10px;
+}
+.container-example {
+    .mixin-my {
+        @include firstMixin(pink);
+    }
+    .mixin-first {
+        @include firstMixin(teal);
+    } 
+    .mixin-dog {
+        @include firstMixin(red);
+    }  
+    .mixin-mixin {
+        @include firstMixin(green);
+    }
+    .button-example-mixin:hover {
+        @include firstMixin(rgb(17, 54, 54));
+    }
+}

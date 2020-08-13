@@ -1,0 +1,12 @@
+%firstTemplate {
+    padding: 10px;
+    background-color: teal;
+    color: rgb(241, 239, 239);
+    margin-left: 10px;
+}
+.button-example-template {
+    @extend %firstTemplate;
+    &:hover {
+        background-color: rgb(17, 54, 54);
+    }
+}

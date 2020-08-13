@@ -105,7 +105,7 @@
                 </section>
                 
                 <section>
-                    <h3>3. Импорт</h3>
+                    <h3>3. Импорт.</h3>
                     <ul>
                         <li>Sass позволяет импортировать данные из другого файла;</li>
                         <li>Для импорта возьмите файл, например <code>button.scss</code>;</li>
@@ -130,6 +130,97 @@
 <pre>
 //style.scss
 <span class="span-prop">@import</span> "button.scss";
+</pre>
+                </section>
+                                
+                <section>
+                    <h3>4. Шаблоны.</h3>
+                    <ul>
+                        <li>Sass позволяет делать шаблоны;</li>
+                        <li>Для объявления шаблона используют знак <code>%(можно заменить на селектор класса, т.е. точку)</code>;</li>
+                        <li>Далее пишем название шаблона на латинице <code>%firstTemplate(.firstTemplate)</code>;</li>
+                        <li>Потом открываем фигурные скобки и записываем свойства и значения <code>%firstTemplate(.firstTemplate) { color: pink }</code>;</li>
+                        <li>Что бы использовать шаблон нужно применить <code>@extend</code> и через пробел написать название шаблона <code>@extend %firstTemplate(.firstTemplate)</code>;</li>
+                    </ul>
+                    <div class="container-example">
+                        <button class="button-example-template">My</button>
+                        <button class="button-example-template">first</button>
+                        <button class="button-example-template">%</button>
+                        <button class="button-example-template">template</button>
+                    </div>
+<pre>
+<span class="span-prop">%firstTemplate</span> {
+    padding: <span class="span-prop">10px</span>;
+    background-color: <span class="span-prop">teal</span>;
+    color: <span class="span-prop">rgb(241, 239, 239)</span>;
+    margin-left: <span class="span-prop">10px</span>;
+}
+<span class="span-selector">.button-example-template</span> {
+    @extend <span class="span-prop">%firstTemplate</span>;
+    <span class="span-selector">&:hover</span> {
+        background-color: <span class="span-prop">rgb(17, 54, 54)</span>;
+    }
+}
+</pre>
+                </section>
+                                                
+                <section>
+                    <h3>5. Миксины или примеси.</h3>
+                    <ul>
+                        <li>Sass позволяет делать миксины;</li>
+                        <li>Для объявления миксина используют <code>@mixin</code>;</li>
+                        <li>Далее пишем название миксина на латинице, затем ставим круглые скобки <code>@mixin myFirstMixin()</code>;</li>
+                        <li>Потом открываем фигурные скобки и записываем свойства и значения <code>@mixin myFirstMixin() { color: pink }</code>;</li>
+                        <li>В миксины можно передавать переменные <code>@mixin myFirstMixin($colorPink) { color: $colorPink }</code>;</li>
+                        <li>Что бы использовать миксин нужно применить <code>@include</code> и через пробел написать название миксина и передать значение переменной<code>@include myFirstMixin($colorPink)</code>;</li>
+                    </ul>
+                    <div class="container-example">
+                        <button class="button-example-mixin mixin-my">My</button>
+                        <button class="button-example-mixin mixin-first">first</button>
+                        <button class="button-example-mixin mixin-dog">@</button>
+                        <button class="button-example-mixin mixin-mixin">mixin</button>
+                    </div>
+<pre>
+<span class="span-prop">@mixin firstMixin($color)</span> {
+    background-color: <span class="span-prop">$color</span>;
+    padding: <span class="span-prop">10px</span>;
+    color: <span class="span-prop">rgb(241, 239, 239)</span>;
+    margin-left: <span class="span-prop">10px</span>;
+}
+<span class="span-selector">.container-example</span> {
+    <span class="span-selector">.mixin-my</span> {
+        @include <span class="span-prop">firstMixin(pink)</span>;
+    }
+    <span class="span-selector">.mixin-first</span> {
+        @include <span class="span-prop">firstMixin(teal)</span>;
+    } 
+    <span class="span-selector">.mixin-dog</span> {
+        @include <span class="span-prop">firstMixin(red)</span>;
+    }  
+    <span class="span-selector">.mixin-mixin</span> {
+        @include <span class="span-prop">firstMixin(green)</span>;
+    }
+    <span class="span-selector">.button-example-mixin:hover</span> {
+        @include <span class="span-prop">firstMixin(rgb(17, 54, 54))</span>;
+    }
+}
+</pre>
+                </section>
+                                                                
+                <section>
+                    <h3>6. Арифметические операции.</h3>
+                    <ul>
+                        <li>Sass позволяет использовать арифметические операции: - , + , / , * ;</li>
+                    </ul>
+                    <div class="container-example">
+                        <button class="button-example-plus">+</button>
+                    </div>
+<pre>
+<span class="span-prop">$fontSBtn</span>: 20px;
+<span class="span-selector">.button-example-plus</span> {
+    font-size: <span class="span-prop">$fontSBtn</span>;
+    width: <span class="span-prop">100px + $fontSBtn</span>;
+}
 </pre>
                 </section>
             </section>

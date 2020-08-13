@@ -1,0 +1,5 @@
+$fontSBtn: 20px;
+.button-example-plus {
+    font-size: $fontSBtn;
+    width: 100px + $fontSBtn;
+}

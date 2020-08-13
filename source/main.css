@@ -84,6 +84,53 @@ pre .span-prop {
   background-color: pink;
 }
 
+.button-example-template {
+  padding: 10px;
+  background-color: teal;
+  color: #f1efef;
+  margin-left: 10px;
+}
+
+.button-example-template:hover {
+  background-color: #113636;
+}
+
+.container-example .mixin-my {
+  background-color: pink;
+  padding: 10px;
+  color: #f1efef;
+  margin-left: 10px;
+}
+.container-example .mixin-first {
+  background-color: teal;
+  padding: 10px;
+  color: #f1efef;
+  margin-left: 10px;
+}
+.container-example .mixin-dog {
+  background-color: red;
+  padding: 10px;
+  color: #f1efef;
+  margin-left: 10px;
+}
+.container-example .mixin-mixin {
+  background-color: green;
+  padding: 10px;
+  color: #f1efef;
+  margin-left: 10px;
+}
+.container-example .button-example-mixin:hover {
+  background-color: #113636;
+  padding: 10px;
+  color: #f1efef;
+  margin-left: 10px;
+}
+
+.button-example-plus {
+  font-size: 20px;
+  width: 120px;
+}
+
 .button-example-import {
   padding: 10px;
   background-color: teal;
