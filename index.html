@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn SASS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./source/main.css">
+</head>
+<body>
+    <div class="container-grid">
+        <header class="header">
+            <h1>Learn SASS</h1>
+        </header>
+        <main class="main">
+            <section>
+                <h2>Как установить SASS:</h2>
+                <ol>
+                    <li>Открываем консоль;</li>
+                    <li>Устанавливаем Parcel <code>npm install -g parcel-bundler</code>;</li>
+                    <li>Создаём файл package.json для проекта <code>npm init -y</code>;</li>
+                    <li>Устанавливаем <code>parcel index.html</code> для автоматизации приложения;</li>
+                    <li>Устанавливаем Sass <code>npm install -g sass</code>;</li> 
+                    <li>Говорим SASS отслеживать все изменения в файле style.scss и вносить их в файл style.css, для этого в консоле вводим <code>sass –watch style.scss:style.css</code>;</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Чем крут SASS:</h2>
+                <section>
+                    <h3>1. Вложенность.</h3>
+                    <ul>
+                        <li><span>Sass</span> позволяет вкладывать стили внутрь других стилей;</li>
+                        <li>В вложенности можно исползовать все селекторы CSS;</li>
+                        <li>Есть свой селектор <code>&</code>, который заменяет родителя;</li>
+                    </ul>
+                    <div class="container-example">
+                        <p class="example"><span>Sass</span> позволяет вкладывать стили внутрь других стилей.</p>
+                        <a class="link" href="#">Click</a>
+                    </div>
+<pre>
+<span class="span-selector">.container-example</span> {
+    border: <span class="span-prop">1px solid grey</span>;
+    text-align: <span class="span-prop">center</span>;
+    padding: <span class="span-prop">1rem</span>;
+}
+
+<span class="span-selector">.example</span> {
+    <span class="span-selector">span</span> {
+        background-color: <span class="span-prop">pink</span>;
+    }
+}
+
+<span class="span-selector">.link</span> {
+    color: <span class="span-prop">pink</span>;
+    <span class="span-selector">&:hover</span> {
+        color: <span class="span-prop">teal</span>;
+    }
+}
+</pre>
+
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <p><span>&#127827;</span>2020<span>&#127827;</span></p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
