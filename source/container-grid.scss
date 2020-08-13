@@ -1,9 +1,10 @@
 .container-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 7rem auto 10rem;
+    grid-template-rows: 7rem 4rem auto 10rem;
     grid-template-areas: 
     "header header header"
+    "aside aside aside"
     "main main main"
     "footer footer footer";
 
@@ -19,6 +20,32 @@
     background-color: pink;
 }
 
+.aside {
+    grid-area: aside;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(238, 207, 212);
+}
+
+.menu {
+    a {
+        color: teal; 
+        text-decoration: none;
+        margin: 15px;
+    }
+}
+
+.button-up {
+    position: fixed;
+    right: 10vh;
+    bottom: 10vh;
+    z-index: 10;
+    font-size: 36px;
+}
+
 .main {
     grid-area: main;
 
@@ -30,6 +57,10 @@
 
     > section {
         width: 50%;
+        margin-bottom: 40px;
+        section {
+            margin-bottom: 50px;
+        }
     }
 }
 
